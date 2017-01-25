@@ -1,0 +1,6 @@
+  [run]
+  source = mocks
+  omit =
+      mocks/core/migrations/*.py
+      mocks/core/tests/*.py
+      mocks/wsgi.py

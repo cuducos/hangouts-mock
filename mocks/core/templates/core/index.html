@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Congresspeople</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+  <h1>List of Brazilian congresspeople and their applicant IDs</h1>
+  {% if congresspeople %}
+  <table>
+    <thead>
+      <tr>
+        <th>Applicant ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for congressperson in congresspeople %}
+      <tr>
+        <td>{{ conpressperson.applicant_id }}</td>
+        <td>{{ congressperson.name }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p>Sorry, but the database is empty.</p>
+  {% endif %}
+</body>
+</html>
